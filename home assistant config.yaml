@@ -1,0 +1,15 @@
+mqtt:
+  broker: 192.168.X.X  # Adres serwera MQTT
+  username: YOUR_USERNAME
+  password: YOUR_PASSWORD
+
+sensor:
+  - platform: mqtt
+    name: "Temperature from ESP"
+    state_topic: "home/esp/temperature"
+    unit_of_measurement: "°C"
+
+  - platform: mqtt
+    name: "Pressure from ESP"
+    state_topic: "home/esp/pressure"
+    unit_of_measurement: "hPa"
